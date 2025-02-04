@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <p>Your literary heaven</p>
+        </header>
+
+        <main>
+            <div class="left-sidebar">
+                <nav>
+                    <ul class="menu">
+                        <li>All books</li>
+                        <ul class="submenu">
+                            <li>Read</li>
+                            <li>Unread</li>
+                        </ul>
+                    </ul>
+                </nav>
+                <button class="add-book-button">Add a book</button>
+            </div>
+
+            <div id="books-section"></div>
+
+            <div id="right-sidebar"></div>
+        </main>
+    </body>
 </html>
