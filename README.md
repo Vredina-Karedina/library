@@ -1,2 +1,2 @@
 # library
-Personal library
+A library for private use
