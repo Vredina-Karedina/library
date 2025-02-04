@@ -1,12 +1,33 @@
+@font-face {
+  font-family: 'alex_brushregular';
+  src: url('header-font/alexbrush-regular-webfont.woff2') format('woff2'),
+       url('header-font/alexbrush-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*============
 global styles
 ============*/
+body {
+  font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  user-select: none;
+}
 
 
 /*============
     layout
 ============*/
-
+header {
+  font-family: 'alex_brushregular', Georgia, serif;
+  font-size: 5.5rem;
+}
 
 /*============
   components
