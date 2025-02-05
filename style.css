@@ -13,11 +13,13 @@ global styles
 body {
   font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   user-select: none;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -26,17 +28,66 @@ body {
 ============*/
 header {
   font-family: 'alex_brushregular', Georgia, serif;
-  font-size: 5.5rem;
+  font-size: clamp(1rem, 10vw, 4rem);
+  height: calc(1.1em + 0.4vh);
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-sidebar{
+  width: calc(6rem + 5vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  margin-bottom: 3vh;
+}
+
+.book-section {
+  width: auto;
+  display:flex;
+}
+
+aside {
+  width: calc(5rem + 20vw);
+  display: flex;
 }
 
 /*============
   components
 ============*/
 
+/* lists */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu li {
+  margin-left: 1em;
+}
+
+
 /* images */
 
 
 /* buttons */
+.add-book-button {
+  font: inherit;
+  font-size: 0.9rem;
+}
 
 
 /*============
