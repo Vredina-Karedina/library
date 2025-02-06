@@ -13,7 +13,7 @@ global styles
 body {
   font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -44,23 +44,37 @@ main {
 }
 
 .left-sidebar{
-  width: calc(6rem + 5vw);
+  width: calc(20rem + 5vw);
+  margin-top: 1.75vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-nav {
-  margin-bottom: 3vh;
+  line-height: calc(1.1em + 0.5vw);
 }
 
 .book-section {
   width: auto;
   display:flex;
+  flex-direction: column;
+}
+
+.bookshelf {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.books {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 7%;
+  margin-right: 5%;
+  transform: translateY(1.25vw);
 }
 
 aside {
-  width: calc(5rem + 20vw);
+  width: calc(60rem + 5vw);
   display: flex;
 }
 
@@ -81,12 +95,28 @@ ul {
 
 
 /* images */
+.shelf {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.book {
+  height: 18vw;
+  width: auto;
+}
 
 
 /* buttons */
 .add-book-button {
+  margin-top: 10vh;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1.2vw, 1.1rem);
+  min-width: 6rem;
 }
 
 
