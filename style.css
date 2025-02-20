@@ -13,8 +13,8 @@ global styles
 body {
   font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   font-weight: normal;
-  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
-  height: 100vh;
+  font-size: clamp(0.9rem, 0.5rem + 1.1vw, 3rem);
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   user-select: none;
@@ -26,9 +26,13 @@ body {
 /*============
     layout
 ============*/
+html, body {
+  height: 100%;
+}
+
 header {
   font-family: 'alex_brushregular', Georgia, serif;
-  font-size: clamp(1rem, 10vw, 4rem);
+  font-size: clamp(2.5rem, 1rem + 5vw, 7rem);
   height: calc(1.1em + 0.4vh);
   margin-bottom: 5vh;
   display: flex;
@@ -37,45 +41,40 @@ header {
 }
 
 main {
-  height: 100%;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.left-sidebar{
-  width: calc(20rem + 5vw);
-  margin-top: 1.75vw;
+#left-sidebar{
+  width: calc(3rem + 10vw);
+  padding: calc(0.1rem + 1vw);
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: calc(1.1em + 0.5vw);
 }
 
-.book-section {
-  width: auto;
-  display:flex;
-  flex-direction: column;
+#books-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .bookshelf {
   width: auto;
-  height: auto;
+  height: fit-content;
+  margin-bottom: 1.75vw;
   display: flex;
   flex-direction: column;
 }
 
-.books {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 7%;
-  margin-right: 5%;
-  transform: translateY(1.25vw);
-}
-
 aside {
-  width: calc(60rem + 5vw);
+  width: clamp(20rem, 10rem + 10vw, 40rem);
   display: flex;
+  align-items: flex-end;
 }
 
 /*============
@@ -96,7 +95,7 @@ ul {
 
 /* images */
 .shelf {
-  width: 90%;
+  width: 18vw;
   height: auto;
   object-fit: cover;
   display: block;
@@ -106,17 +105,24 @@ ul {
 }
 
 .book {
-  height: 18vw;
-  width: auto;
+  height: auto;
+  width: 15vw;
+  margin-left: 13%;
+  transform: translateY(1.25vw);
 }
 
+.chair {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+}
 
 /* buttons */
 .add-book-button {
-  margin-top: 10vh;
+  margin-top: calc(1rem + 5vh);
   font: inherit;
-  font-size: clamp(0.75rem, 1.2vw, 1.1rem);
-  min-width: 6rem;
+  font-size: clamp(0.7rem, 0.3rem + 1vw, 2rem);
+  width: clamp(5rem, 3rem + 7vw, 15rem);
 }
 
 
